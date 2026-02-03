@@ -1,0 +1,16 @@
+#include<iostream>
+int main()
+{
+    int atomic_n;
+    std::cout<<"what is the atomic number of the nucleus?";
+    std::cin>>atomic_n;
+    while(std::cin.fail() or atomic_n < 118)
+    {
+        std::cout<<"Invalid input, please enter a valid atomic number";
+        std::cin.clear();
+        std::cin.ignore();
+        std::cin>>atomic_n;
+        break;
+    }
+    std::cout<<"The atomic number"<<atomic_n<<std::endl;
+}
